@@ -34,11 +34,11 @@ Swift 6 concurrency (async/await) for loading/parsing JSON off the main thread
 
 ViewModels annotated with @MainActor for UI-safe state updates
 
-Testing Status
+# Testing Status
 
 ✅ Unit tests: JSON decoding + repository fetch + basic ViewModel state tests (if you added them)
 
-#⏳ UI tests: pending (to be added)
+⏳ UI tests: pending (to be added)
 
 Notes: 
 
