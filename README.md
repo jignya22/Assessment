@@ -36,7 +36,7 @@ ViewModels annotated with @MainActor for UI-safe state updates
 
 # Testing Status
 
-✅ Unit tests: JSON decoding + repository fetch + basic ViewModel state tests (if you added them)
+✅ Unit tests: JSON decoding + repository fetch
 
 ⏳ UI tests: pending (to be added)
 
