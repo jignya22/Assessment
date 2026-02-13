@@ -15,6 +15,7 @@ struct ToolTipView: View {
             HStack(alignment: .top, spacing: 12) {
                 Image("buddy_tip")
                     .imageScale(.large)
+                    .accessibilityIdentifier("tooltipIcon")
                 
                 ExpandableTextView(isExpanded: $isExpanded, originalMessage: originalMessage, expandedAdditional: expandedAdditional)
 
@@ -27,5 +28,6 @@ struct ToolTipView: View {
             )
         }
         .padding(25)
+        .accessibilityIdentifier("tooltipCard")
     }
 }

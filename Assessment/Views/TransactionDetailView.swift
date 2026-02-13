@@ -57,10 +57,12 @@ struct TransactionDetailView: View {
             Image("success-icon")
                 .imageScale(.large)
                 .foregroundStyle(isCredit ? .green : .red)
+                .accessibilityIdentifier("transactionIcon")
             
             Text(isCredit ? "Credit transaction" : "Debit transaction")
                 .font(CustomFonts.transactionTitle)
                 .foregroundStyle(.primary)
+                .accessibilityIdentifier("transactionLabel")
         }
         .padding(.top, 18)
     }
@@ -84,10 +86,12 @@ struct TransactionDetailView: View {
             Text(title)
                 .font(CustomFonts.fieldLabel)
                 .foregroundStyle(.secondary)
+                .accessibilityIdentifier("fieldLabel")
             
             Text(value)
                 .font(CustomFonts.fieldValue)
                 .foregroundStyle(.primary)
+                .accessibilityIdentifier("fieldValue")
         }
     }
     
@@ -112,8 +116,9 @@ struct TransactionDetailView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 16)
+        .accessibilityIdentifier("closeButton")
+        .accessibilityLabel("Close")
     }
-    
 }
 
 #Preview("Detail") {

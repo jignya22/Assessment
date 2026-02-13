@@ -15,6 +15,7 @@ struct ExpandableTextView: View {
         Text(makeAttributedText())
             .font(CustomFonts.tooltipText)
             .foregroundStyle(.primary)
+            .accessibilityIdentifier("textviewExpandable")
             .environment(\.openURL, OpenURLAction { url in
                 if url.scheme == "toggle" {
                     withAnimation(.easeInOut) {

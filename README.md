@@ -34,26 +34,13 @@ Swift 6 concurrency (async/await) for loading/parsing JSON off the main thread
 
 ViewModels annotated with @MainActor for UI-safe state updates
 
-# Testing Status
+#Testing Status
 
-✅ Unit tests: JSON decoding + repository fetch
+Added unit tests for core logic.
 
-⏳ UI tests: pending (to be added)
+UI tests are partially implemented due to time constraints.
 
-Notes: 
+Implemented:
+- testCloseReturnsToList: Opens the first transaction, taps Close, and verifies navigation returns to the Transactions list.
 
-UI tests were not completed within the given timeframe. Planned UI test coverage:
-
-Verify transactions list renders and is scrollable.
-
-Tap a transaction row → detail screen appears.
-
-Verify credit/debit header label and icon presence.
-
-Verify tooltip default text.
-
-Tap “Show more” → expanded text appears.
-
-Tap “Show less” → expanded text collapses.
-
-Tap “Close” → returns to list screen.
+- Added accessibility identifiers consistently across views to improve test stability.

@@ -26,7 +26,6 @@ struct TransactionListView: View {
             errorView(message: message)
         } else {
             listView
-//                .accessibilityIdentifier("list")
         }
     }
     
@@ -58,6 +57,7 @@ struct TransactionListView: View {
             .buttonStyle(.plain)
         }
         .listStyle(.plain)
+        .accessibilityIdentifier("transactionsList")
     }
 }
 
@@ -68,15 +68,18 @@ struct TransactionRowView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(transaction.merchantName)
                 .font(CustomFonts.fieldValue)
+                .accessibilityIdentifier("\(transaction.merchantName)-\(transaction.id)")
             
             if let desc = transaction.description, !desc.isEmpty {
                 Text(desc)
                     .font(CustomFonts.fieldLabel)
                     .foregroundStyle(.secondary)
+                    .accessibilityIdentifier("\(desc)-\(transaction.id)")
             }
             
             Text(CurrencyFormatters.format(transaction.amount))
                 .font(CustomFonts.amountValue)
+                .accessibilityIdentifier("\(transaction.amount)-\(transaction.id)")
         }
         .padding(.vertical, 6)
     }
